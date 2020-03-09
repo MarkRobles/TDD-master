@@ -1,0 +1,22 @@
+﻿@model TDD.Models.Category
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model.CategoryName</title>
+  
+</head>
+<body>
+    <div>
+        <h2>@Model.CategoryName</h2>
+        <img scr="@Url.Action("GetImage","Category",new { id = Model.CategoryID})"/>
+        <p>@Html.DisplayFor(model => model.Description);</p>
+    </div>
+</body>
+</html>
